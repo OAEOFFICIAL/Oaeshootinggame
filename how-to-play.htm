@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <title>How to Play - Rock Paper Scissors</title>
+    <style>
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: yellow;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px red;
+            width: 80%;
+            max-width: 600px;
+           height: 400px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #rules {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: green;
+            line-height: 1.6;
+            background-color: yellow;
+            height: 700px;
+            width: inherit;
+            box-shadow: 0 4px 10px red;
+            border-radius: 20px 20px 20px 20px;
+            text-align: center;
+        }
+
+        #showRulesButton {
+            background-color: black;
+            color: yellow;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 200px;
+            transition: background-color 0.3s;
+        }
+
+        #showRulesButton:hover {
+            background-color: #45a049;
+        }
+
+        #showRulesButton:active {
+            transform: scale(0.98);
+        }
+
+        #rules.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>How to Play Rock, Paper, Scissors</h1>
+        
+        <button id="showRulesButton" onclick="toggleRules()">Show Rules</button>
+        
+        <div id="rules" class="hidden">
+            <p>Rock, Paper, Scissors is a simple hand game played between two people. The rules are:</p>
+            <ul>
+                <li><strong>Rock</strong> beats <strong>Scissors</strong>.</li>
+                <li><strong>Scissors</strong> beats <strong>Paper</strong>.</li>
+                <li><strong>Paper</strong> beats <strong>Rock</strong>.</li>
+            </ul>
+            <p>The game is a tie if both players choose the same move.</p>
+        <p>To play, click the "Rock", "Paper", or "Scissors" buttons and the game will compare your choice with the computer's choice.</p>
+                   <p>Tap <a href="rock-paper-scissors.html">here</a> to continue the game.</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle the visibility of the rules
+        function toggleRules() {
+            const rules = document.getElementById('rules');
+            const button = document.getElementById('showRulesButton');
+            
+            // Toggle the 'hidden' class to show or hide the rules
+            if (rules.classList.contains('hidden')) {
+                rules.classList.remove('hidden');
+                button.textContent = "Hide Rules";  // Change button text
+            } else {
+                rules.classList.add('hidden');
+                button.textContent = "Show Rules";  // Change button text
+            }
+        }
+    </script>
+</body>
+</html>
