@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Shooting Game</title>
+    <link rel="stylesheet" href="shoot.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Shooting Game</h1>
+        <div class="game-info">
+            <p>Score: <span id="score">0</span></p>
+            <p>Level: <span id="level">1</span></p>
+            <p>Time Left: <span id="time">30</span>s</p>
+        </div>
+        <button id="startGame">Start Game</button>
+        <div id="gameArea"></div>
+    </div>
+
+    <!-- Sound effects -->
+    <audio id="shootSound" src="shoot.mp3"></audio>
+    <audio id="levelUpSound" src="level-up.mp3"></audio>
+
+    <script src="shoot.js"></script>
+</body>
+</html>
